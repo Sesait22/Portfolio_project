@@ -3,10 +3,445 @@
 // to customize it as you may want.
 
 @import "variables";
+@import "./base";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-// Write your sass code here or import partials
+// $color_1: #777;
+// $background-color_1: #fff;
 
-h1 {
-  color: tomato;
+
+body{
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    font-family: monospace;
+    color: white;
+    
 }
+
+ header{
+    // border:2px solid white;
+    display: block;
+     width: 100%;
+     margin: 5px;
+     padding: 5px;
+    //  overflow: hidden;
+
+     nav{
+        //  border: 2px solid black;
+         display: flex;
+        height: 16vh;
+        width: 100%;
+         margin: 15px;
+         padding: 5px;
+         
+
+         ul{
+            width: 50%;
+            // border: 2px solid red;
+            padding: 4px;
+            margin: 5px;
+         }
+        
+         div{
+            // border: 2px solid green;
+            display: flex;
+            justify-content: flex-end;
+            width: 50%;
+            padding:5px;
+            margin: 5px;
+         }
+
+         .flex-end{
+            padding: 15px;
+            margin: 5px;
+         }
+
+         li{
+            list-style: none;
+            display: inline-block;
+            padding: 10px 45px;
+         }
+
+         a{
+            display: flex;
+            text-decoration: none;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            color: rgb(255, 255, 255);
+            letter-spacing: 5px;
+
+            &:hover{
+                color: coral;
+
+            }
+         }
+
+         .fa-bars{
+            display: none;
+            border: 2px solid yellow;
+            color: white;
+            width: 3%;
+            font-size: 35px;
+         }
+ }
+ 
+.hero{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    height: 48vh;
+    border-radius: 50%;
+    
+    &:hover{
+        filter: grayscale(100%);
+    }
+  }
+
+  .name{
+    // border: 2px solid yellow;
+    display: flex;
+    justify-content: center;
+    padding: 22px;
+    margin: 20px 70px 100px;
+}
+
+  h1{
+    // font-family: monospace;
+    font-size: 6rem;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    line-height: 9rem;
+    padding: 8px ;
+    margin: 30px;
+    animation: text 3s 2;
+}
+}
+
+@keyframes text{
+    0%{
+        color: black;
+        margin-bottom: -40px;
+    }
+
+    40%{
+        letter-spacing: 27px;
+        margin-bottom: -40px;
+    }
+}
+
+//  ABOUT ME SECTION
+
+section{
+    // border: 2px solid blue;
+    padding: 16px;
+    margin: 16px;
+
+    h3{
+        display: flex;
+        justify-content: center;
+        font-size: 5rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        padding: 8px;
+        margin: 8px;
+    }
+
+    p{
+        font-size: 2rem;
+        padding: 2px;
+        margin: 2px;
+        animation: slide-in 3s 2;
+    }
+
+}
+
+@keyframes slide-in{
+    from{
+      margin-left:-100%;
+      width: 300%;
+    }
+   
+    to{
+        margin-left: 0%;
+        width: 100%;
+    }
+
+
+}
+
+// PROJECTS
+
+h2{
+    // border: 2px solid orange;
+    font-size: 5rem;
+    text-align: center;
+    letter-spacing: 3px;
+    padding: 20px;
+    margin: 10px ;
+}
+
+  #box-wrapper{
+    // border: 3px solid rgb(216, 132, 30);
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    width: 100%;
+    margin: 3px;
+    padding: 2px;
+
+   div{
+    // border: 2px solid blueviolet;
+    width: 33.33%;
+    margin: 2.9px;
+    padding: 3px;
+
+     .project_1{
+        display: flex;
+        width: 500px;
+        height: 47.5vh;
+        margin-left: 30px;
+
+        &:hover{
+            animation: shake 0.5s linear 3;
+        }
+     }
+   }
+
+  }
+
+  @keyframes shake{
+    0%{
+        transform: rotate(5deg);
+    }
+
+    25% {
+        transform: rotate(-6deg);
+    }
+  
+    50% {
+        transform: rotate(5deg);
+    }
+  
+    75% {
+        transform: rotate(-6deg);
+    }
+  
+    100% {
+        transform: rotate(5deg);
+    }
+  }
+
+//   SKILLS
+
+.container{
+    h2{
+        text-decoration: underline;
+        padding: 6px;
+        margin: 12px;
+    }
+
+    h3{
+        font-size: 3rem;
+
+    }
+    
+}
+
+// SOCIALS
+
+footer{
+    // border: 2px solid wheat;
+    height: 10vh;
+    padding: 5px;
+    margin: 5px;
+
+    .socials{
+        display: flex;
+        justify-content: center;
+       align-content: space-between;
+       height: 4vh;
+       padding: 20px;
+       margin:20px;
+    }
+
+    li{
+        list-style: none;
+        letter-spacing: 35px;
+    }
+
+    //  ICONS
+    
+     .fa-brands{
+        color: white;
+        font-size: 35px;
+     }
+}
+
+// SCROLL UP
+
+//    .scroll-up{
+//     text-align: center;
+//      .fa-up{
+//         border: 2px solid yellow;
+//         color: white;
+//         width: 30%;
+//         height: 10vh;
+//      }
+//    }
+
+    // CONTACT-FORM
+
+    form{
+        // border: 2px solid wheat;
+        padding: 15px;
+        margin: 18px;
+
+        h2{
+            display: block;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #fff9f9;
+            font-size: 7rem;
+            padding: 3px;
+            margin: 3px;
+        }
+
+        label{
+            display: block;
+            text-transform: uppercase;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #b8abab;
+        }
+
+        input{
+
+            width: 40%;
+            height: 4rem;
+            border: 0;
+            padding: 10px;
+            font-size: 2rem;
+        }
+
+        textarea{
+            display: block;
+            width: 40%;
+            height: 150px;
+
+        }
+    }
+
+    //  BUTTON
+
+    button{
+        background-color: rgb(139, 133, 133);
+        width: 15%;
+        // border-radius: 15%;
+        font-weight: 700;
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        padding: 6px;
+        margin:5px 6px;
+        transition: all 0.5s ease-in-out;
+
+        &:hover{
+            background-color: rgb(131, 118, 118);
+        }
+    }
+
+    // RETURN
+
+    .text-box{
+        // border: 2px solid rgb(220, 220, 220);
+        width: 220px;
+    height: 50px;
+    border: none;
+    // outline: none;
+    color: rgb(114, 107, 107);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    font-size: 2rem;
+    padding: 15px;
+    margin: 10px;
+        
+    &::before{
+        content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    }
+
+    &:active{
+        color: #000;
+    }
+
+    &:active::after{
+        background: transparent;
+    }
+
+    &:hover::before{
+        opacity: 1;
+    }
+
+    &::after{
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+
+// MEDIA QUERIES
+// @media (max-width:720px){
+// header{
+    
+// }
+
+// .hero{
+//     display: none;
+// }
+// }
+
+// @media(max-width:768px){
+//     nav{
+//         display: none;
+//     }
+// }
+
+// @media(max-width:768px){
+//     header{
+//         padding-right: 7rem;
+//     }
